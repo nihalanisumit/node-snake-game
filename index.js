@@ -26,6 +26,6 @@ mongoose
     console.log("====================================");
     console.log("connected to mongo succesfully");
     console.log("====================================");
-    app.listen(8080);
+    app.listen(process.env.PORT || 8080);
   })
   .catch(err => console.log("error connecting to mongo" + err));
