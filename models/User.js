@@ -14,7 +14,14 @@ const userSchema = new Schema({
   name: {
     type: String,
     required: true
-  }
+  },
+  scores: [
+    {
+      type: Number,
+      required: false
+    }
+  ],
+  highestScore: Number
 });
 
 module.exports = mongoose.model("User", userSchema);

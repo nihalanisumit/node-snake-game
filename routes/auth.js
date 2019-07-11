@@ -70,6 +70,8 @@ router.post("/signin", (req, res) => {
         res.status(200).json({
           token: token,
           userId: loadedUser._id.toString(),
+          name: loadedUser.name,
+          highestScore: loadedUser.highestScore,
           message: "success"
         });
       }
